@@ -8,7 +8,15 @@ class App:
         self.actions = {
             '1': self.signup,
             '2': self.login,
-            '0': self.exit
+            '0': self.exit,
+            '3': self.not_authenticated,
+            '4': self.not_authenticated,
+            '5': self.not_authenticated,
+            '6': self.not_authenticated,
+            '7': self.not_authenticated,
+            '8': self.not_authenticated,
+            '9': self.not_authenticated,
+            '10': self.not_authenticated
         }
 
     def signup(self):
@@ -31,6 +39,10 @@ class App:
     @staticmethod
     def invalid_selection():
         print('Error 404 \nPage not found.')
+
+    @staticmethod
+    def not_authenticated():
+        print('Error 401 \nUser not authenticated.')
 
     def run(self):
         self.app_active = True
